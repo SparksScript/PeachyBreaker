@@ -1,3 +1,12 @@
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "Notification!",
+    Text = "Thank you for using PeachHub! This is the only game we support right now, but we will support more soon!",
+    Duration = 6, 
+})
+
+
 local gmt = getrawmetatable(game)
 local oldIndex = gmt.__index
 setreadonly(gmt, false)
