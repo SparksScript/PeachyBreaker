@@ -32,6 +32,10 @@ end)
 
 game.Players.LocalPlayer.Character.Humanoid:SetStateEnabled(15,false)
 
+local sound = Instance.new("Sound", game.Workspace)
+sound.SoundId = "rbxassetid://1788243907"
+sound.Looped = false
+sound:Play()
 
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
