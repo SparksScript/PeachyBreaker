@@ -97,7 +97,10 @@ resetjp.TextSize = 36.000
 resetjp.TextWrapped = true
 resetjp.MouseButton1Down:connect(function()
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-	local sound = Instance.new("Sound", game.Workspace)sound.SoundId = "rbxassetid://8084702938"sound.Looped = falsesound:Play()
+	local sound = Instance.new("Sound", game.Workspace)
+sound.SoundId = "rbxassetid://8084702938"
+sound.Looped = false
+sound:Play()
 end)
 
 UICorner_2.CornerRadius = UDim.new(0, 14)
@@ -126,7 +129,10 @@ resetws.TextSize = 36.000
 resetws.TextWrapped = true
 resetws.MouseButton1Down:connect(function()
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 17
-	local sound = Instance.new("Sound", game.Workspace)sound.SoundId = "rbxassetid://8084702938"sound.Looped = falsesound:Play()
+	local sound = Instance.new("Sound", game.Workspace)
+sound.SoundId = "rbxassetid://8084702938"
+sound.Looped = false
+sound:Play()
 end)
 
 UICorner_3.CornerRadius = UDim.new(0, 14)
@@ -143,7 +149,10 @@ walkspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
 walkspeed.TextSize = 36.000
 walkspeed.MouseButton1Down:connect(function()
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 60
-	local sound = Instance.new("Sound", game.Workspace)sound.SoundId = "rbxassetid://8084702938"sound.Looped = falsesound:Play()
+	local sound = Instance.new("Sound", game.Workspace)
+sound.SoundId = "rbxassetid://8084702938"
+sound.Looped = false
+sound:Play()
 end)
 
 UICorner_4.CornerRadius = UDim.new(0, 14)
@@ -160,7 +169,10 @@ jumppower.TextColor3 = Color3.fromRGB(255, 255, 255)
 jumppower.TextSize = 36.000
 jumppower.MouseButton1Down:connect(function()
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 95
-	local sound = Instance.new("Sound", game.Workspace)sound.SoundId = "rbxassetid://8084702938"sound.Looped = falsesound:Play()
+	local sound = Instance.new("Sound", game.Workspace)
+sound.SoundId = "rbxassetid://8084702938"
+sound.Looped = false
+sound:Play()
 end)
 
 UICorner_5.CornerRadius = UDim.new(0, 14)
@@ -177,7 +189,10 @@ becomecrim.TextColor3 = Color3.fromRGB(255, 255, 255)
 becomecrim.TextSize = 36.000
 becomecrim.MouseButton1Down:connect(function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1949.6665, 183.816467, -276.859222, 0.99261409, -2.31229489e-08, 0.12131495, 2.16733795e-08, 1, 1.32683251e-08, -0.12131495, -1.05410205e-08, 0.99261409)
-	local sound = Instance.new("Sound", game.Workspace)sound.SoundId = "rbxassetid://8084702938"sound.Looped = falsesound:Play()
+	local sound = Instance.new("Sound", game.Workspace)
+sound.SoundId = "rbxassetid://8084702938"
+sound.Looped = false
+sound:Play()
 end)
 
 UICorner_6.CornerRadius = UDim.new(0, 14)
