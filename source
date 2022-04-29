@@ -1,9 +1,9 @@
 local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
-    Title = "Notification!",
-    Text = "Thank you for using PeachHub! This is the only game we support right now, but we will support more soon!",
-    Duration = 6, 
+	Title = "Notification!",
+	Text = "Thank you for using PeachHub! This is the only game we support right now, but we will support more soon!",
+	Duration = 6, 
 })
 
 
@@ -33,26 +33,21 @@ end)
 game.Players.LocalPlayer.Character.Humanoid:SetStateEnabled(15,false)
 
 
-
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local UIGradient = Instance.new("UIGradient")
 local label = Instance.new("TextLabel")
-local becomecrim = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local walkspeed = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local resetws = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
 local resetjp = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local resetws = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local walkspeed = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
 local jumppower = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local becomecrim = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 
 --Properties:
@@ -63,7 +58,7 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.Name = "main"
 main.Parent = ScreenGui
 main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-main.Position = UDim2.new(0.486060619, 0, 0.303067505, 0)
+main.Position = UDim2.new(0.480000019, 0, 0.295705557, 0)
 main.Size = UDim2.new(0, 464, 0, 241)
 main.Active = true
 main.Draggable = true
@@ -85,37 +80,33 @@ label.Text = "Peachy Break"
 label.TextColor3 = Color3.fromRGB(0, 0, 0)
 label.TextSize = 46.000
 
-becomecrim.Name = "becomecrim"
-becomecrim.Parent = main
-becomecrim.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
-becomecrim.Position = UDim2.new(0.290948272, 0, 0.580912888, 0)
-becomecrim.Size = UDim2.new(0, 194, 0, 76)
-becomecrim.Font = Enum.Font.RobotoMono
-becomecrim.Text = "Break Out"
-becomecrim.TextColor3 = Color3.fromRGB(255, 255, 255)
-becomecrim.TextSize = 36.000
-becomecrim.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1949.6665, 183.816467, -276.859222, 0.99261409, -2.31229489e-08, 0.12131495, 2.16733795e-08, 1, 1.32683251e-08, -0.12131495, -1.05410205e-08, 0.99261409)
+resetjp.Name = "resetjp"
+resetjp.Parent = main
+resetjp.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+resetjp.Position = UDim2.new(0.0172414184, 0, 0.0290456414, 0)
+resetjp.Size = UDim2.new(0, 29, 0, 29)
+resetjp.Font = Enum.Font.RobotoMono
+resetjp.Text = "RJP"
+resetjp.TextColor3 = Color3.fromRGB(255, 255, 255)
+resetjp.TextScaled = true
+resetjp.TextSize = 36.000
+resetjp.TextWrapped = true
+resetjp.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
 end)
 
 UICorner_2.CornerRadius = UDim.new(0, 14)
-UICorner_2.Parent = becomecrim
+UICorner_2.Parent = resetjp
 
-walkspeed.Name = "walkspeed"
-walkspeed.Parent = main
-walkspeed.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
-walkspeed.Position = UDim2.new(0.566810369, 0, 0.19502075, 0)
-walkspeed.Size = UDim2.new(0, 194, 0, 76)
-walkspeed.Font = Enum.Font.RobotoMono
-walkspeed.Text = "WalkSpeed"
-walkspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
-walkspeed.TextSize = 36.000
-walkspeed.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 60
-end)
-
-UICorner_3.CornerRadius = UDim.new(0, 14)
-UICorner_3.Parent = walkspeed
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(0, 464, 0, 241)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = "🍑"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 100.000
+TextLabel.TextWrapped = true
 
 resetws.Name = "resetws"
 resetws.Parent = main
@@ -132,26 +123,24 @@ resetws.MouseButton1Down:connect(function()
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 17
 end)
 
-UICorner_4.CornerRadius = UDim.new(0, 14)
-UICorner_4.Parent = resetws
+UICorner_3.CornerRadius = UDim.new(0, 14)
+UICorner_3.Parent = resetws
 
-resetjp.Name = "resetjp"
-resetjp.Parent = main
-resetjp.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
-resetjp.Position = UDim2.new(0.0172414184, 0, 0.0290456414, 0)
-resetjp.Size = UDim2.new(0, 29, 0, 29)
-resetjp.Font = Enum.Font.RobotoMono
-resetjp.Text = "RJP"
-resetjp.TextColor3 = Color3.fromRGB(255, 255, 255)
-resetjp.TextScaled = true
-resetjp.TextSize = 36.000
-resetjp.TextWrapped = true
-resetjp.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+walkspeed.Name = "walkspeed"
+walkspeed.Parent = main
+walkspeed.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+walkspeed.Position = UDim2.new(0.566810369, 0, 0.19502075, 0)
+walkspeed.Size = UDim2.new(0, 194, 0, 76)
+walkspeed.Font = Enum.Font.RobotoMono
+walkspeed.Text = "WalkSpeed"
+walkspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+walkspeed.TextSize = 36.000
+walkspeed.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 60
 end)
 
-UICorner_5.CornerRadius = UDim.new(0, 14)
-UICorner_5.Parent = resetjp
+UICorner_4.CornerRadius = UDim.new(0, 14)
+UICorner_4.Parent = walkspeed
 
 jumppower.Name = "jumppower"
 jumppower.Parent = main
@@ -166,5 +155,21 @@ jumppower.MouseButton1Down:connect(function()
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 95
 end)
 
+UICorner_5.CornerRadius = UDim.new(0, 14)
+UICorner_5.Parent = jumppower
+
+becomecrim.Name = "becomecrim"
+becomecrim.Parent = main
+becomecrim.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+becomecrim.Position = UDim2.new(0.290948272, 0, 0.580912888, 0)
+becomecrim.Size = UDim2.new(0, 194, 0, 76)
+becomecrim.Font = Enum.Font.RobotoMono
+becomecrim.Text = "Break Out"
+becomecrim.TextColor3 = Color3.fromRGB(255, 255, 255)
+becomecrim.TextSize = 36.000
+becomecrim.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1949.6665, 183.816467, -276.859222, 0.99261409, -2.31229489e-08, 0.12131495, 2.16733795e-08, 1, 1.32683251e-08, -0.12131495, -1.05410205e-08, 0.99261409)
+end)
+
 UICorner_6.CornerRadius = UDim.new(0, 14)
-UICorner_6.Parent = jumppower
+UICorner_6.Parent = becomecrim
