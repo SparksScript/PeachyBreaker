@@ -47,12 +47,22 @@ local UICorner_2 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 local resetws = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
-local walkspeed = Instance.new("TextButton")
+local tabmain = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
-local jumppower = Instance.new("TextButton")
+local UIGradient_2 = Instance.new("UIGradient")
+local tabmisc = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
-local becomecrim = Instance.new("TextButton")
+local UIGradient_3 = Instance.new("UIGradient")
+local cool = Instance.new("Frame")
 local UICorner_6 = Instance.new("UICorner")
+local maintab = Instance.new("Frame")
+local becomecrim = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local misctab = Instance.new("Frame")
+local jumppower = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local walkspeed = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
 
 --Properties:
 
@@ -62,23 +72,22 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.Name = "main"
 main.Parent = ScreenGui
 main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-main.Position = UDim2.new(0.480000019, 0, 0.295705557, 0)
-main.Size = UDim2.new(0, 464, 0, 241)
-main.Active = true
+main.Position = UDim2.new(0.595757604, 0, 0.380368143, 0)
+main.Size = UDim2.new(0, 536, 0, 326)
 main.Draggable = true
 
 UICorner.CornerRadius = UDim.new(0, 10)
 UICorner.Parent = main
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 107, 134)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(130, 255, 140))}
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(49, 49, 49)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(48, 48, 48))}
 UIGradient.Parent = main
 
 label.Name = "label"
 label.Parent = main
 label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 label.BackgroundTransparency = 1.000
-label.Position = UDim2.new(0, 0, 0.0290456433, 0)
-label.Size = UDim2.new(0, 464, 0, 23)
+label.Position = UDim2.new(0, 0, 0.0290456191, 0)
+label.Size = UDim2.new(0, 536, 0, 23)
 label.Font = Enum.Font.Sarpanch
 label.Text = "Peachy Break"
 label.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -97,11 +106,11 @@ resetjp.TextSize = 36.000
 resetjp.TextWrapped = true
 resetjp.MouseButton1Down:connect(function()
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-local sound = Instance.new("Sound", game.Workspace)
-sound.SoundId = "rbxassetid://8084702938"
-sound.Looped = false
-sound.Volume = 3
-sound:Play()
+	local sound = Instance.new("Sound", game.Workspace)
+	sound.SoundId = "rbxassetid://8084702938"
+	sound.Looped = false
+	sound.Volume = 3
+	sound:Play()
 end)
 
 UICorner_2.CornerRadius = UDim.new(0, 14)
@@ -110,17 +119,18 @@ UICorner_2.Parent = resetjp
 TextLabel.Parent = main
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
-TextLabel.Size = UDim2.new(0, 464, 0, 241)
+TextLabel.Position = UDim2.new(0.870561063, 0, -0.0985667259, 0)
+TextLabel.Size = UDim2.new(0, 97, 0, 105)
 TextLabel.Font = Enum.Font.SciFi
 TextLabel.Text = "🍑"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextSize = 100.000
+TextLabel.TextSize = 33.000
 TextLabel.TextWrapped = true
 
 resetws.Name = "resetws"
 resetws.Parent = main
 resetws.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
-resetws.Position = UDim2.new(0.922413826, 0, 0.0290456414, 0)
+resetws.Position = UDim2.new(0.0828615725, 0, 0.0290456414, 0)
 resetws.Size = UDim2.new(0, 29, 0, 29)
 resetws.Font = Enum.Font.RobotoMono
 resetws.Text = "RWS"
@@ -130,75 +140,158 @@ resetws.TextSize = 36.000
 resetws.TextWrapped = true
 resetws.MouseButton1Down:connect(function()
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 17
-local sound = Instance.new("Sound", game.Workspace)
-sound.SoundId = "rbxassetid://8084702938"
-sound.Looped = false
-sound.Volume = 3
-sound:Play()
+	local sound = Instance.new("Sound", game.Workspace)
+	sound.SoundId = "rbxassetid://8084702938"
+	sound.Looped = false
+	sound.Volume = 3
+	sound:Play()
 end)
 
 UICorner_3.CornerRadius = UDim.new(0, 14)
 UICorner_3.Parent = resetws
 
-walkspeed.Name = "walkspeed"
-walkspeed.Parent = main
-walkspeed.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
-walkspeed.Position = UDim2.new(0.566810369, 0, 0.19502075, 0)
-walkspeed.Size = UDim2.new(0, 194, 0, 76)
-walkspeed.Font = Enum.Font.RobotoMono
-walkspeed.Text = "WalkSpeed"
-walkspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
-walkspeed.TextSize = 36.000
-walkspeed.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 60
-local sound = Instance.new("Sound", game.Workspace)
-sound.SoundId = "rbxassetid://8084702938"
-sound.Looped = false
-sound.Volume = 3
-sound:Play()
-end)
+tabmain.Name = "tabmain"
+tabmain.Parent = main
+tabmain.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+tabmain.Position = UDim2.new(0.0167910457, 0, 0.177914113, 0)
+tabmain.Size = UDim2.new(0, 73, 0, 32)
+tabmain.Font = Enum.Font.Oswald
+tabmain.Text = "Main"
+tabmain.TextColor3 = Color3.fromRGB(176, 176, 176)
+tabmain.TextSize = 36.000
+tabmain.TextWrapped = true
 
-UICorner_4.CornerRadius = UDim.new(0, 14)
-UICorner_4.Parent = walkspeed
+UICorner_4.Parent = tabmain
 
-jumppower.Name = "jumppower"
-jumppower.Parent = main
-jumppower.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
-jumppower.Position = UDim2.new(0.0172413886, 0, 0.19502075, 0)
-jumppower.Size = UDim2.new(0, 194, 0, 76)
-jumppower.Font = Enum.Font.RobotoMono
-jumppower.Text = "JumpPower"
-jumppower.TextColor3 = Color3.fromRGB(255, 255, 255)
-jumppower.TextSize = 36.000
-jumppower.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 95
-local sound = Instance.new("Sound", game.Workspace)
-sound.SoundId = "rbxassetid://8084702938"
-sound.Looped = false
-sound.Volume = 3
-sound:Play()
-end)
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 206, 209)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(219, 255, 205))}
+UIGradient_2.Parent = tabmain
 
-UICorner_5.CornerRadius = UDim.new(0, 14)
-UICorner_5.Parent = jumppower
+tabmisc.Name = "tabmisc"
+tabmisc.Parent = main
+tabmisc.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+tabmisc.Position = UDim2.new(0.0167910457, 0, 0.291411042, 0)
+tabmisc.Size = UDim2.new(0, 73, 0, 32)
+tabmisc.Font = Enum.Font.Oswald
+tabmisc.Text = "Misc"
+tabmisc.TextColor3 = Color3.fromRGB(176, 176, 176)
+tabmisc.TextSize = 36.000
+tabmisc.TextWrapped = true
+
+UICorner_5.Parent = tabmisc
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 206, 209)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(219, 255, 205))}
+UIGradient_3.Parent = tabmisc
+
+cool.Name = "cool"
+cool.Parent = main
+cool.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+cool.Position = UDim2.new(0.177238807, 0, 0.177914113, 0)
+cool.Size = UDim2.new(0, 421, 0, 248)
+
+UICorner_6.Parent = cool
+
+maintab.Name = "maintab"
+maintab.Parent = main
+maintab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+maintab.BackgroundTransparency = 1.000
+maintab.Position = UDim2.new(0.180970147, 0, 0.138036802, 0)
+maintab.Size = UDim2.new(0, 414, 0, 256)
+maintab.Visible = false
 
 becomecrim.Name = "becomecrim"
-becomecrim.Parent = main
+becomecrim.Parent = maintab
 becomecrim.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
-becomecrim.Position = UDim2.new(0.290948272, 0, 0.580912888, 0)
-becomecrim.Size = UDim2.new(0, 194, 0, 76)
+becomecrim.Position = UDim2.new(0.0491049141, 0, 0.117902219, 0)
+becomecrim.Size = UDim2.new(0, 153, 0, 43)
 becomecrim.Font = Enum.Font.RobotoMono
 becomecrim.Text = "Break Out"
 becomecrim.TextColor3 = Color3.fromRGB(255, 255, 255)
+becomecrim.TextScaled = true
 becomecrim.TextSize = 36.000
+becomecrim.TextWrapped = true
 becomecrim.MouseButton1Down:connect(function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1949.6665, 183.816467, -276.859222, 0.99261409, -2.31229489e-08, 0.12131495, 2.16733795e-08, 1, 1.32683251e-08, -0.12131495, -1.05410205e-08, 0.99261409)
-local sound = Instance.new("Sound", game.Workspace)
-sound.SoundId = "rbxassetid://8084702938"
-sound.Looped = false
-sound.Volume = 3
-sound:Play()
+	local sound = Instance.new("Sound", game.Workspace)
+	sound.SoundId = "rbxassetid://8084702938"
+	sound.Looped = false
+	sound.Volume = 3
+	sound:Play()
 end)
 
-UICorner_6.CornerRadius = UDim.new(0, 14)
-UICorner_6.Parent = becomecrim
+UICorner_7.CornerRadius = UDim.new(0, 14)
+UICorner_7.Parent = becomecrim
+
+misctab.Name = "misctab"
+misctab.Parent = main
+misctab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+misctab.BackgroundTransparency = 1.000
+misctab.Position = UDim2.new(0.180970147, 0, 0.138036802, 0)
+misctab.Size = UDim2.new(0, 414, 0, 256)
+misctab.Visible = false
+
+jumppower.Name = "jumppower"
+jumppower.Parent = misctab
+jumppower.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+jumppower.Position = UDim2.new(0.495385259, 0, 0.115481779, 0)
+jumppower.Size = UDim2.new(0, 153, 0, 44)
+jumppower.Font = Enum.Font.RobotoMono
+jumppower.Text = "JumpPower"
+jumppower.TextColor3 = Color3.fromRGB(255, 255, 255)
+jumppower.TextScaled = true
+jumppower.TextSize = 36.000
+jumppower.TextWrapped = true
+jumppower.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 95
+	local sound = Instance.new("Sound", game.Workspace)
+	sound.SoundId = "rbxassetid://8084702938"
+	sound.Looped = false
+	sound.Volume = 3
+	sound:Play()
+end)
+
+UICorner_8.CornerRadius = UDim.new(0, 14)
+UICorner_8.Parent = jumppower
+
+walkspeed.Name = "walkspeed"
+walkspeed.Parent = misctab
+walkspeed.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+walkspeed.Position = UDim2.new(0.048297748, 0, 0.115481794, 0)
+walkspeed.Size = UDim2.new(0, 153, 0, 44)
+walkspeed.Font = Enum.Font.RobotoMono
+walkspeed.Text = "WalkSpeed"
+walkspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+walkspeed.TextScaled = true
+walkspeed.TextSize = 36.000
+walkspeed.TextWrapped = true
+walkspeed.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 60
+	local sound = Instance.new("Sound", game.Workspace)
+	sound.SoundId = "rbxassetid://8084702938"
+	sound.Looped = false
+	sound.Volume = 3
+	sound:Play()
+end)
+
+UICorner_9.CornerRadius = UDim.new(0, 14)
+UICorner_9.Parent = walkspeed
+
+-- Scripts:
+
+local function IUTCG_fake_script() -- tabmain.LocalScript 
+	local script = Instance.new('LocalScript', tabmain)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.maintab.Visible = true
+		script.Parent.Parent.misctab.Visible = false
+	end)
+end
+coroutine.wrap(IUTCG_fake_script)()
+local function ZDJNSZI_fake_script() -- tabmisc.LocalScript 
+	local script = Instance.new('LocalScript', tabmisc)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.maintab.Visible = false
+		script.Parent.Parent.misctab.Visible = true
+	end)
+end
+coroutine.wrap(ZDJNSZI_fake_script)()
